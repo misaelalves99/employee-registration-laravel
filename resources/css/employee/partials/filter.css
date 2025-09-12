@@ -1,0 +1,91 @@
+/* resources/css/employee/partials/filter.css */
+
+/* Container do filtro */
+.filter-container {
+  background-color: #ffffff;
+  padding: 1.75rem;
+  border-radius: 0.75rem;
+  border: 1px solid #e5e7eb;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+  font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  width: 100%;
+  max-width: 280px;
+  /* largura padrão de sidebar */
+}
+
+/* Título da seção */
+.filter-container h3 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #1f2937;
+  margin-bottom: 1rem;
+}
+
+/* Campos do formulário */
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+/* Labels */
+.field label {
+  font-weight: 600;
+  color: #374151;
+  margin-bottom: 0.25rem;
+  text-align: left;
+}
+
+/* Selects e inputs */
+.select,
+.input {
+  width: 100%;
+  padding: 0.625rem 0.75rem;
+  border: 1px solid #d1d5db;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  color: #111827;
+  background-color: #f9fafb;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  appearance: none;
+}
+
+.select:focus,
+.input:focus {
+  outline: none;
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.2);
+  background-color: #ffffff;
+}
+
+/* Botão de filtro */
+.btnPrimary {
+  padding: 0.75rem 1rem;
+  background-color: #2563eb;
+  color: #ffffff;
+  font-weight: 600;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  text-align: center;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  max-width: 100%;
+}
+
+.btnPrimary:hover {
+  background-color: #1d4ed8;
+  transform: translateY(-1px);
+}
+
+/* Responsividade */
+@media (max-width: 1024px) {
+  .filter-container {
+    max-width: 100%;
+    width: 100%;
+    padding: 1.5rem;
+    margin-bottom: 1rem;
+  }
+}

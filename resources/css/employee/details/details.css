@@ -1,0 +1,131 @@
+/* public/css/employee/details/details.css */
+
+/* Container principal */
+.details-container {
+  max-width: 700px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background-color: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+  font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  color: #2c3e50;
+}
+
+/* Título */
+.details-title {
+  font-size: 2rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #1f2937;
+}
+
+/* Card de detalhes */
+.details-card {
+  background-color: #f9fafb;
+  border-radius: 12px;
+  padding: 1.75rem 1.5rem;
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.03);
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-bottom: 1.5rem;
+}
+
+/* Labels fortes */
+.details-label {
+  font-weight: 600;
+  color: #374151;
+}
+
+/* Grupo de botões */
+.details-buttonGroup {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.details-btnPrimary,
+.details-btnSecondary {
+  padding: 0.65rem 1.5rem;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.2s ease-in-out, transform 0.1s ease;
+  border: none;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+
+/* Botão azul */
+.details-btnPrimary {
+  background-color: #2563eb;
+  color: #ffffff;
+}
+
+.details-btnPrimary:hover {
+  background-color: #1d4ed8;
+  transform: translateY(-1px);
+}
+
+/* Botão cinza */
+.details-btnSecondary {
+  background-color: #e5e7eb;
+  color: #1f2937;
+}
+
+.details-btnSecondary:hover {
+  background-color: #d1d5db;
+  transform: translateY(-1px);
+}
+
+/* Loading */
+.details-loading {
+  text-align: center;
+  font-size: 1rem;
+  color: #6b7280;
+}
+
+/* Not Found */
+.details-notFoundContainer {
+  text-align: center;
+  padding: 2rem;
+  background-color: #fef2f2;
+  border: 1px solid #fca5a5;
+  border-radius: 12px;
+  max-width: 500px;
+  margin: 3rem auto;
+}
+
+.details-notFoundTitle {
+  font-size: 1.75rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  color: #b91c1c;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .details-container {
+    margin: 1rem;
+    padding: 1rem;
+  }
+
+  .details-card {
+    padding: 1rem;
+    gap: 0.5rem;
+  }
+
+  .details-buttonGroup {
+    flex-direction: column;
+  }
+
+  .details-btnPrimary,
+  .details-btnSecondary {
+    width: 100%;
+  }
+}

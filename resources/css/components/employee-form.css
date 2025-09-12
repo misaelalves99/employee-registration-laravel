@@ -1,0 +1,130 @@
+/* Container do formulário */
+.form {
+  background-color: #ffffff;
+  padding: 2rem;
+  border-radius: 0.75rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  max-width: 700px;
+  margin: 0 auto;
+  font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+/* Cada campo do formulário */
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  text-align: left;
+  /* Adicionado para alinhar os campos à esquerda */
+}
+
+/* Labels */
+.label {
+  font-weight: 600;
+  color: #374151;
+  margin-bottom: 0.25rem;
+  text-align: left;
+}
+
+/* Inputs, selects e checkboxes */
+.input,
+.select,
+.formCheckbox {
+  width: 100%;
+  padding: 0.625rem 0.75rem;
+  border: 1px solid #d1d5db;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  color: #111827;
+  background-color: #f9fafb;
+  transition: border-color 0.2s, box-shadow 0.2s, background-color 0.2s;
+}
+
+.input:focus,
+.select:focus,
+.formCheckbox:focus {
+  outline: none;
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.2);
+  background-color: #ffffff;
+}
+
+/* Mensagens de erro */
+.errorText {
+  color: #dc2626;
+  font-size: 0.875rem;
+  margin-top: 0.25rem;
+}
+
+/* Checkbox container */
+.checkboxContainer {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-align: left;
+  /* Adicionado para alinhar o checkbox */
+}
+
+/* Botões de submissão e secundários */
+.submitButton,
+.btnPrimary {
+  width: 100%;
+  padding: 0.75rem;
+  background-color: #2563eb;
+  color: #ffffff;
+  font-weight: 700;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  text-transform: uppercase;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.submitButton:hover,
+.btnPrimary:hover {
+  background-color: #1d4ed8;
+  transform: translateY(-1px);
+}
+
+/* Botão secundário */
+.btnSecondary {
+  padding: 0.75rem;
+  background-color: #6b7280;
+  color: #ffffff;
+  font-weight: 600;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  text-decoration: none;
+  text-align: center;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btnSecondary:hover {
+  background-color: #4b5563;
+  transform: translateY(-1px);
+}
+
+/* Wrapper de botões */
+.buttons {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .form {
+    padding: 1.5rem;
+    width: 90%;
+  }
+
+  .buttons {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+}
