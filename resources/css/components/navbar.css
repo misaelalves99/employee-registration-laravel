@@ -1,18 +1,15 @@
 /* Navbar principal */
 .navbar {
   background-color: #2563eb;
-  /* azul padrão profissional */
   padding: 1rem 2rem;
-  /* espaçamento confortável */
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-  /* sombra sutil */
   top: 0;
   z-index: 50;
 }
 
 /* Container centralizado */
 .navbar .container {
-  max-width: 1280px;
+  max-width: 1400px;
   margin: 0 auto;
   display: flex;
   align-items: center;

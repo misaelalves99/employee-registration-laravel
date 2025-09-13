@@ -1,4 +1,4 @@
-{{-- resources/views/components/employee-form.blade.php --}}
+<!-- resources/views/components/employee-form.blade.php -->
 
 @props([
     'departments' => collect(),
@@ -47,7 +47,8 @@
     {{-- Salário --}}
     <div class="field">
         <label for="salary" class="label">Salário:</label>
-        <input type="number" step="0.01" id="salary" name="salary" value="{{ old('salary', $emp->salary ?? '') }}" class="input" required>
+        <input type="number" step="0.01" id="salary" name="salary"
+               value="{{ old('salary', $emp->salary ?? '') }}" class="input" required>
         @error('salary') <p class="errorText">{{ $message }}</p> @enderror
     </div>
 
@@ -55,7 +56,7 @@
     <div class="field">
         <label for="admission_date" class="label">Data de Admissão:</label>
         <input type="date" id="admission_date" name="admission_date"
-               value="{{ old('admission_date', isset($emp->admission_date) ? $emp->admission_date->format('Y-m-d') : '') }}"
+               value="{{ old('admission_date', isset($emp->admission_date) ? \Carbon\Carbon::parse($emp->admission_date)->format('Y-m-d') : '') }}"
                class="input" required>
         @error('admission_date') <p class="errorText">{{ $message }}</p> @enderror
     </div>
@@ -66,7 +67,8 @@
         <select id="department_id" name="department_id" class="select" required>
             <option value="">Selecione...</option>
             @foreach($departments as $department)
-                <option value="{{ $department->id }}" {{ old('department_id', $emp->department_id ?? '') == $department->id ? 'selected' : '' }}>
+                <option value="{{ $department->id }}"
+                    {{ old('department_id', $emp->department_id ?? '') == $department->id ? 'selected' : '' }}>
                     {{ $department->name }}
                 </option>
             @endforeach
